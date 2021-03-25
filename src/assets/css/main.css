@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+
+/*Global styles*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font: 'Maven Pro', sans-serif;
+    --main-font-color-dark: #252525;
+    --secondary-font-color: #211956;
+    --body-font-color: #515151;
+}
+
+html {
+    font-family: var(--body-font);
+    font-size: 10px;
+    color: var(--body-font-color);
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: Maven Pro;
+}
+
+section {
+    padding: 3.9rem 0;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: 1.6rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 122.5rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+
+/*header*/
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0.5), transparent);
+}
+
+.nav {
+    height: 7.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 10rem;
+}
+
+.menu-toggle {
+    color: #fff;
+    font-size: 2.2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2.5rem;
+    cursor: pointer;
+    z-index: 1500;
+}
+
+.fa-times {
+    display: none;
+}
+
+.nav-list {
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: var(--main-font-color-dark);
+    padding: 4.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1250;
+    transform: translateX(-100%);
+    transition: transform .5s;
+}
+
+.nav::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0.8);
+    z-index: 1000;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .5s;
+}
+
+.open .fa-times {
+    display: block;
+}
+
+.open .fa-bars {
+    display: none;
+}
+
+.open .nav-list {
+    transform: translateX(0);
+}
+
+.open .nav::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.nav-item {
+    border-bottom: 2px solid rgba(255, 255, 255, .3);
+}
+
+.nav-link {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-right: -2px;
+    transition: color.5s;
+}
+
+.nav-link:hover {
+    color: var(--secondary-font-color);
+}
+
+/*Hero*/
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url("/assets/img/header.png") center no-repeat;
+    background-size: cover;
+    display: flex;
+    color: white;
+}
+
+.sub-hero {
+    padding: 15rem 25rem 0rem 25rem;
+    font-weight: 200;
+}
+
+.third-hero {
+    font-weight: 200;
+    padding: 5rem 60rem 0rem 25rem;
+    font-size: 24px;
+}
+
+.hr-hero {
+    margin: 3rem 5rem 0rem 25rem;
+    font-size: 14px;
+    font-weight: 400;
+    float: left;
+}
+
+.hr-hero i {
+    font-size: 20px;
+
+}
+
+.hr-hero a {
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+.main-hero {
+    padding: 2rem 15rem;
+    font-size: 90px;
+}
+
+/*Second*/
+
+.second .description p{
+    font-weight: 400;
+    font-size: 32px;
+    margin-top: 3rem;
+    padding-right: 30rem;
+}
+
+.second .description a{
+	font-size: 14px;
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+
+.left {
+	width: 50%;
+	float: left;
+}
+
+.left p{
+    font-size: 14px!important;
+    line-height: 200%;
+}
+
+.right{
+	width: 50%;
+	float: left;
+}
+
+.right img{
+    margin-top: 3rem;
+    margin-left: 15rem;
+    max-width: 415px;
+    max-height: 415px;
+}
+.left h1{
+	font-weight: 400;
+    font-size: 32px;
+    margin-top: 3rem;
+}
+
+.left p{
+	font-weight: 500;
+    font-size: 14px;
+    margin-top: 3rem;
+    
+}
+
+/*Third*/
+.third {
+    width: 100%;
+    height: 50vh;
+    background: url("/assets/img/pexels-alexander-isreb-1797393 1.png") center no-repeat;
+    background-size: cover;
+    display: flex;
+    color: white;
+}
+
+/*fourth*/
+
+
+.filter{
+	position: absolute;
+	right: 20rem;
+
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn.active{
+	font-weight: 800;
+	color : #12008C;
+}
+
+.mbtop{
+	margin-top: 5rem;
+}
+.filterDiv {
+ margin-right: 3.5rem;
+ margin-bottom: 3.5rem;
+  width: 30%;
+  float: left;
+  display: block; /* Hidden by default */
+}
+
+
+.filterDiv h1{
+	margin-top: 2rem;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+.filterDiv p{
+	margin-top: 1rem;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+/*Fifth*/
+.fifth {
+    width: 100%;
+    height: 60vh;
+    background: url("/assets/img/pexels-yury-kim-585418 1.png") center no-repeat;
+    background-size: cover;
+    display: flex;
+    color: white;
+}
+
+.new-technology {
+	width: 40vw;
+	background-color: rgba(0, 0, 0, 0.9);
+	padding: 5rem;
+}
+
+.new-technology h1{
+	font-size: 36px;
+}
+
+.new-technology p{
+	font-weight: 400;
+	letter-spacing: 10%;
+	margin-top: 2rem;
+	font-size: 18px;
+}
+
+/*sixth*/
+.sixth{
+	width: 100%;
+	margin-top: 10rem;
+    height: 30vh;
+    background:#EFF5F5;
+    background-size: cover;
+    display: flex;
+    color: white;	
+}
+
+.twenty{
+	width: 20%;
+	float: left;
+}
+
+.twenty img{
+	width: 150px;
+	height: 70px;
+	margin: auto;
+}
+
+/*seven*/
+.our-work{
+	width: 100%;
+    height: 60vh;
+    width: 56%;
+    background: url("/assets/img/pexels-brayden-law-1829191 1.png") center no-repeat;
+    background-size: cover;
+  	float: left;
+    color: white;
+    padding: 13rem 10rem;
+    border-radius: 0px!important;
+}
+
+
+.inside h1{
+	font-weight: 400;
+	font-size: 32px;
+	margin-top: 1rem;
+}
+
+.inside p{
+	margin-top: 2rem;
+	letter-spacing: 10%;
+	font-size: 14px;
+	margin-right: 5rem;
+}
+
+.inquiry{
+	width: 44%;
+	float: left;
+	padding-top: 5rem;
+	padding-left: 10rem; 
+}
+
+.inquiry h1{
+	font-weight: 400;
+	font-size: 32px;
+	margin-bottom: 4rem;
+}
+
+.inquiry input{
+	color: black;
+	border: 0px;
+	border-bottom: 1px solid black;
+	padding-bottom: 8px;
+	font-family: Maven Pro;
+	width: 100%;
+	margin-bottom: 4rem;
+}
+
+.pesan{
+	padding: 1rem 5rem;
+	align-items: center;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.pesan i{
+	margin-right: 2rem;
+}
+/*Tasteful Recipe*/
+
+.tasteful-recipe {
+    background: url("/assets/img/tasteful-recipes.jpg") center no-repeat;
+    background-size: cover;
+
+}
+
+.between {
+    min-height: 65vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Discover*/
+
+.image-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.discover-our-menu .restaurant-description {
+    padding-top: 3rem;
+    margin-bottom: 0;
+}
+
+/*PERFECT BLAND*/
+
+.perfect-blend {
+    background: url(/assets/img/perfect-blend.jpg) center no-repeat;
+    background-size: cover;
+}
+
+/*footer*/
+
+footer {
+    padding: 7.9rem 0;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.back-to-top {
+    width: 7rem;
+    height: 7rem;
+    background-color: #121212;
+    position: absolute;
+    top: -3rem;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.back-to-top i {
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.back-to-top i:hover {
+    animation: up 2s infinite;
+}
+
+
+.footer-content {
+    overflow: hidden;
+}
+
+.footer-content h4 {
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+}
+
+.footer-content .asterisk {
+    margin: 2.4rem 0;
+}
+
+.footer-content-about {
+    margin-bottom: 5.4rem;
+}
+
+.footer-content-about p {
+    line-height: 2;
+}
+
+.social-icons {
+    list-style: none;
+    margin-bottom: 5.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons i {
+    font-size: 2rem;
+    color: #fff;
+    padding: .8rem 2rem;
+    opacity: .5;
+    transition: color .5s;
+}
+
+.social-icons i:hover,
+.social-icons i:focus {
+    color: var(--secondary-font-color);
+}
+
+.newsletter-form {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-input {
+    width: 100%;
+    max-width: 25rem;
+    padding: 1rem;
+    border-radius: .4rem;
+}
+
+.newsletter-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--main-font-color-dark);
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 1px .6rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 19.5rem;
+}
+
+/*Media queries*/
+
+@media screen and (min-width: 900px) {
+    section {
+        padding: 7.9rem;
+        right: 2.5rem;
+        left: -2.5rem;
+    }
+
+    .logo {
+        margin-left: 2.5rem;
+        width: 5rem;
+    }
+
+    .menu-toggle {
+        display: none
+    }
+
+    .nav {
+        justify-content: space-between;
+    }
+
+    .nav-list {
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        padding: 0;
+        justify-content: initial;
+        flex-direction: row;
+        transform: initial;
+        transition: initial;
+        font-weight: 500;
+    }
+
+    .nav-item {
+        margin: 0 2.4rem;
+        border: none;
+    }
+
+    .nav-item:last-child {
+        font-size: 1.3rem;
+    }
+
+    .active {
+        position: relative;
+    }
+
+
+
+    .sub-headline {
+        font-size: 10rem;
+    }
+
+    .first-letter {
+        font-size: 12.2rem;
+    }
+
+    .headline {
+        font-size: 4.7rem;
+        letter-spacing: .8rem;
+
+    }
+
+    .line {
+        max-width: 11.4rem;
+    }
+
+    .restaurant-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .restaurant-info {
+        font-weight: 1000;
+    }
+
+    .restaurant-info>div {
+        flex: 1;
+    }
+
+    .padding-right {
+        padding-right: 7rem;
+    }
+
+    .footer-content {
+        max-width: 77.5rem;
+        margin: auto;
+    }
+
+    .footer-content-about {
+        max-width: 0 auto 5.4rem;
+    }
+
+    .footer-content-divider {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social-media,
+    .newsletter-form {
+        width: 100%;
+        max-width: 27.3rem;
+        margin-bottom: 0 1rem;
+    }
+
+    .social-icons i {
+        opacity: 1;
+    }
+
+    .newsletter-btn {
+        margin-left: 7.5rem;
+    }
+
+    .newsletter-btn i {
+        margin-left: 5.5rem;
+    }
+
+}
+
+/*Animations*/
+@keyframes fadeUp {
+    0% {
+        transform: translateY(4rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes grow {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        transform: translateY(-4rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes up {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-1);
+    }
+}
